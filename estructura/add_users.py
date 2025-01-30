@@ -9,13 +9,13 @@ class User(rx.Base):
 class State(rx.State):
     users: list [User] = [
         User(
-           nombre="Mariano Epherra",
-           email="mariano@example.com", 
+           nombre="Juan Perez",
+           email="juan@example.com", 
            sexo="Masculino", 
         ),
         User(
-           nombre="Marisa Lagardo",
-           email="marisa@example.com", 
+           nombre="Maria Lago",
+           email="maria@example.com", 
            sexo="Femenino", 
         ),
     ]
@@ -38,6 +38,7 @@ def add_customer_button() -> rx.Component:
                 rx.icon("plus", size=26),
                 rx.text("Agregar Usuario", size="4"),
             ),
+
         ),
         rx.dialog.content(
             rx.dialog.title(
@@ -87,25 +88,8 @@ def add_customer_button() -> rx.Component:
             reset_on_submit=False,
         ),
         max_width="450px",
+        
     ),
 )
-    
 
-def index() -> rx.Component:
-    return rx.vstack(
-        add_customer_button(),
-            rx.table.root(
-            rx.table.header(
-                rx.table.row(
-                    rx.table.column_header_cell("Nombre"),
-                    rx.table.column_header_cell("Email"),
-                    rx.table.column_header_cell("Sexo"),
-                ),
-            ),
-        rx.table.body(
-            rx.foreach(State.users, show_user),
-        ),
-        variant="surface",
-        size="3",
-    ),
-)
+    

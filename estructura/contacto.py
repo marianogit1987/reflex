@@ -30,7 +30,7 @@ def contac_form()-> rx.Component:
                 ),
                 rx.vstack(
                     rx.heading(
-                        "Send us a message",
+                        "Envianos un mensaje",
                         size="4",
                         weight="bold",
                     ),
@@ -50,14 +50,14 @@ def contac_form()-> rx.Component:
                 rx.flex(
                     rx.flex(
                         form_field(
-                            "First Name",
-                            "First Name",
+                            "Nombre",
+                            "Nombre",
                             "texto",
                             "first_name",
                         ),
                         form_field(
-                            "Last Name",
-                            "Last Name",
+                            "Apellido",
+                            "Apellido",
                             "texto",
                             "last_name",
                         ),
@@ -76,7 +76,7 @@ def contac_form()-> rx.Component:
                             "email",
                         ),
                         form_field(
-                            "Phone", "Phone", "tel", "phone",
+                            "Celular", "Celular", "tel", "phone",
                         ),
                         spacing="3",
                         flex_direction=[
@@ -87,7 +87,7 @@ def contac_form()-> rx.Component:
                     ),
                     rx.flex(
                         rx.text(
-                            "Message",
+                            "Mensaje",
                             style={
                                 "font-size": "15px",
                                 "font-weight": "500",
@@ -95,15 +95,15 @@ def contac_form()-> rx.Component:
                             },
                         ),
                         rx.text_area(
-                            placeholder="Message",
-                            name="message",
+                            placeholder="Mensaje",
+                            name="mensaje",
                             resize="vertical",
                         ),
                         direction="column",
                         spacing="1",
                     ),
                     rx.form.submit(
-                        rx.button("Submit"),
+                        rx.button("Enviar"),
                         as_child=True,
                     ),
                     direction="column",
@@ -121,3 +121,5 @@ def contac_form()-> rx.Component:
         ),
         size="3",
     )
+    
+    
